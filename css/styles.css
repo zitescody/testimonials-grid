@@ -1,0 +1,265 @@
+/* Universal Styles */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;600&display=swap');
+
+:root {
+    /* Primary Colors */
+    --moderateviolet: hsl(263, 55%, 52%);
+    --verydarkgrayishblue: hsl(217, 19%, 35%);
+    --verydarkblackishblue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Neutral Colors */
+    --lightgray: hsl(0, 0%, 81%);
+    --lightgrayishblue: hsl(210, 46%, 95%);
+
+    /* 
+    1. "Verified Graduate" has the same color as the person's name with 50% opacity
+    2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+    */
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 12pt;
+    background-color: var(--lightgray);
+}
+
+h1 {
+    font-size: 12pt;
+}
+
+h2 {
+    font-size: 10pt;
+}
+
+h3 {
+    font-size: 14pt;
+    max-height: 90%;
+    max-width: 90%;
+}
+
+p {
+    font-size: 12pt;
+    max-height: 90%;
+    max-width: 90%;
+}
+
+/* Grid Styles */
+div.container-one {
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: second;
+    grid-row-end: third;
+    justify-self: center;
+    align-self: top;
+    grid-area: one;
+}
+
+div.container-two {
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: third;
+    grid-row-end: fourth;
+    justify-self: center;
+    align-self: top;
+    grid-area: two;
+}
+
+div.container-three {
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: fourth;
+    grid-row-end: fifth;
+    justify-self: center;
+    align-self: top;
+    grid-area: three;
+}
+
+div.container-four {
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: fifth;
+    grid-row-end: sixth;
+    justify-self: center;
+    align-self: top;
+    grid-area: four;
+}
+
+div.container-five {
+    grid-column-start: second;
+    grid-column-end: third;
+    grid-row-start: sixth;
+    grid-row-end: seventh;
+    justify-self: center;
+    align-self: top;
+    grid-area: five;
+}
+
+main.container {
+    display: grid;
+    grid-template-columns: [first] 5% [second] 90% [third] 5% [end];
+    grid-template-rows: [first] 0% [second] 23% [third] 14% [fourth] 13% [fifth] 22% [sixth] 25% [seventh] 1% [end];
+    grid-template-areas: 
+        ". . ."
+        ". one ."
+        ". two ."
+        ". three ."
+        ". four ."
+        ". five ."
+        ". . ."
+    ;
+    row-gap: 30px;
+}
+
+/* Container Styles */
+.one {
+    background-color: var(--moderateviolet);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.two {
+    background-color: var(--verydarkgrayishblue);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.three {
+    background-color: var(--white);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.four {
+    background-color: var(--verydarkblackishblue);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.five {
+    background-color: var(--white);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+}
+
+div.container-content {
+    margin: 5%;
+}
+
+/* Content Styles */
+div.container-profile {
+    display: flex;
+}
+
+div.container-name {
+    margin-left: 5%;
+}
+
+img.profile-pic {
+    border-radius: 50px;
+    border-style: 1px solid;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+
+h2.verify {
+    margin-top: -5%;
+}
+
+.white {
+    color: var(--white);
+}
+
+.white-50 {
+    color: var(--white);
+    opacity: 0.5;
+}
+
+.white-70 {
+    color: var(--white);
+    opacity: 0.7;
+}
+
+.black-50 {
+    opacity: 0.5;
+}
+
+.black-70 {
+    opacity: 0.7;
+}
+/* Media Queries */
+@media (min-width: 1000px) {
+    /* Grid Styles */
+    div.container-one {
+        grid-column-start: second;
+        grid-column-end: fourth;
+        grid-row-start: second;
+        grid-row-end: third;
+        justify-self: center;
+        align-self: top;
+        grid-area: one;
+    }
+    
+    div.container-two {
+        grid-column-start: fourth;
+        grid-column-end: fifth;
+        grid-row-start: second;
+        grid-row-end: third;
+        justify-self: center;
+        align-self: top;
+        grid-area: two;
+    }
+    
+    div.container-three {
+        grid-column-start: second;
+        grid-column-end: third;
+        grid-row-start: third;
+        grid-row-end: fourth;
+        justify-self: center;
+        align-self: top;
+        grid-area: three;
+    }
+    
+    div.container-four {
+        grid-column-start: third;
+        grid-column-end: fifth;
+        grid-row-start: third;
+        grid-row-end: fourth;
+        justify-self: center;
+        align-self: top;
+        grid-area: four;
+    }
+    
+    div.container-five {
+        grid-column-start: fifth;
+        grid-column-end: sixth;
+        grid-row-start: second;
+        grid-row-end: fourth;
+        justify-self: center;
+        align-self: top;
+        grid-area: five;
+    }
+    
+    main.container {
+        display: grid;
+        grid-template-columns: [first] 10% [second] 20% [third] 20% [fourth] 20% [fifth] 20% [sixth] 10% [end];
+        grid-template-rows: [first] 2.5% [second] 47.5% [third] 47.5% [fourth] 2.5% [end];
+        grid-template-areas: 
+            ". . . . . ."
+            ". one one two five ."
+            ". three four four five ."
+            ". . . . . ."
+        ;
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+}
+/* Attribution Styles */
+.attribution { font-size: 11px; text-align: center; margin-top: 20%; }
+.attribution a { color: hsl(228, 45%, 44%); }
